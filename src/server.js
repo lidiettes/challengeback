@@ -17,7 +17,7 @@ app.use(fileUpload({
 }));
 
 
-app.use("/api/gif", gifRouter);
+app.use("/api/", gifRouter);
 
 
 

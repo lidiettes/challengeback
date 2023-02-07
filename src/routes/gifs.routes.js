@@ -1,14 +1,16 @@
 const express = require("express");
 const router = express.Router();
-const { getAllGifs, createGif } = require("../controller/gifs.controller")
+const { getAllGifs, createGif, deleteGif } = require("../controller/gifs.controller")
 
 
-router.get('/get/', getAllGifs)
+router.get('/gif/', getAllGifs)
 
-router.post('/', fileUpload({
+router.post('/gif', fileUpload({
     useTempFiles : true,
     tempFileDir : './uploads'
 }), createGif)
+
+router.delete('/gif/:id', deleteGif)
 
 
 module.exports = router;
