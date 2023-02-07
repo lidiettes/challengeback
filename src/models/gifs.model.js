@@ -9,6 +9,10 @@ const GifSchema = Schema({
     thumbnail: {
         type: String,
         required: false
+    },
+    image:{
+        public_id: String,
+        secure_url : String
     }
 
 });
