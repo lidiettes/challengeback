@@ -11,15 +11,15 @@ cloudinary.config({
 
 
 
- async function uploadImage(filePath) {
+async function uploadImage(filePath) {
     return await cloudinary.uploader.upload(filePath, {
         folder: 'replit'
     })
 }
 
 
- async function deleteImage(publicId) {
+async function deleteImage(publicId) {
     return await cloudinary.upload.destroy(publicId)
 }
 
-module.exports = {uploadImage, deleteImage }
+module.exports = { uploadImage, deleteImage }
